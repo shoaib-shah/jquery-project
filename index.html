@@ -23,6 +23,13 @@
     <button id="slidedown">slide down</button>
     <button id="slidetoggle">slide toggle</button>
 
+    
+    <button id="fadein">fade in</button>
+    <button id="fadeout">fade out</button>
+    <button id="fadetoggle">fade toggle</button>
+    <button id="fadeto">fade to</button>
+
+
 
     <script>
         $(document).ready(function(){
@@ -50,10 +57,54 @@
             $("#slidedown").click(function(){
                 $("div").slideDown(2000);
             })
+            
             $("#slidetoggle").click(function(){
                 $("div").slideToggle(2000);
             })
+
+            $("div").click(function(){
+                $(this).css({ 
+                    "background-color": "green"})
+                })
+                
+             $("div").mouseenter(function(){
+                $(this).css({ 
+                    "background-color": "aqua"})
+                })
+                
+             $("div").mouseleave(function(){
+                $(this).css({ 
+                    "background-color": "red"})
+                })
+                
+             $("div").dblclick(function(){
+                $(this).css({ 
+                    "background-color": ""})
+                })
+
+
+
+
+
+
+
+
+
             
+            $("#fadein").click(function(){
+                $("div").fadeIn(2000);
+            })
+            
+            $("#fadeout").click(function(){
+                $("div").fadeOut(2000);
+            })
+            $("#fadetoggle").click(function(){
+                $("div").fadeToggle(2000);
+            })
+            
+            $("#fadeto").click(function(){
+                $("div").fadeTo(2000, 0.5);
+            })
             
 
 
