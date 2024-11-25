@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: lavender;
+            color: black;
+            text-align: center;
+        }
+        header,footer{
+    background-color: aqua;
+    padding: 15PX;
+        }
+
+        main{
+            padding: 50PX;
+        }
+
+        /* mobile media jquery */
+        @media (max-width:480px) {
+            body{
+                background-color: lightblue;
+                font-size: 14px;
+            }
+            header,footer{
+                padding: 10px;
+                font-size: 1rem;
+            }
+            main{
+                padding: 15px;
+            }
+         }
+
+            /* tablat media jquery */
+            @media (min-width:481px)and (max-width:768px) {
+            body{
+                background-color: rgb(243, 148, 187);
+                font-size: 16px;
+            }
+            header,footer{
+                padding: 15px;
+                font-size: 1.2rem;
+            }
+            main{
+                padding: 25px;
+            }
+         }
+
+         /* desktop media jquery */
+         @media (min-width:769px) {
+            body{
+                background-color: rgb(172, 132, 246);
+                font-size: 18px;
+            }
+            header,footer{
+                padding: 20px;
+                font-size: 1.5em;
+            }
+            main{
+                padding: 40px;
+            }
+         }
+
+    </style>
+</head>
+<body>
+    
+<header>
+    <h1> Responsive web design </h1>
+</header>
+
+<main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus vitae nemo consequatur sed quod! Quo ex culpa ducimus, eaque excepturi dicta sed et. Rem, veritatis placeat voluptatem sit rerum atque.</p>
+</main>
+
+<footer>
+    <p>&copy;2024 Responsive web design</p>
+</footer>
+
+</body>
+</html>
