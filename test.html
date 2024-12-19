@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>countries ;</h1>
+    <input type="checkbox" name="" id="" value="pakistan">pakistan
+    <input type="checkbox" name="" id="" value="England">England
+    <input type="checkbox" name="" id="" value="USA">USA
+    <input type="checkbox" name="" id="" value="India">India
+    <br><br><br>
+
+    <input type="submit" name="" id="btnsubmit" value="submit">
+<br>
+    <div id="display"></div>
+
+
+<script>
+    $(document).ready(function(){
+        $("#btnsubmit").click(function(){
+        var result =$("input[type='checkbox']:checked");
+        if (result.length > 0) {
+            var resultstring = result.length + " " + "checkboxe(s) checked </br>";
+            result.each(function(){
+                resultstring += $(this).val() + "</br>";
+            }) 
+            $("#display").html(resultstring);
+            
+        } else {
+            $("#display").html("no checkbox checked");
+        }
+        
+
+    }) 
+})
+</script>
+
+</body>
+</html>

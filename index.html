@@ -7,11 +7,13 @@
     <title>jquery-project</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
+    
 </head>
 <body>
 
     <div>
         <h1>jquery-intro ??? </h1>
+    
     </div>
 
     <button id="hidebtn">hide</button>
@@ -29,15 +31,45 @@
     <button id="fadetoggle">fade toggle</button>
     <button id="fadeto">fade to</button>
 
+    <input type="text" name="" id="userText" placeholder="enter something">
+    <ul id="list">
 
+    </ul>
+
+    <button id="btnappend">append</button>
+    <button id="btnprepend">prepend</button>
 
     <script>
+        $(document).ready(function(){
+
+            $("#btnappend").click(function(){
+                $("#list").append("<li> apple </li>"  )
+            })
+            $("#btnprepend").click(function(){
+                $("#list").prepend("<li> mango </li>"  )
+            })
+
+
+        //     $("#btnappend").click(function(){
+        //         var userinput = $("#userText").val();
+        //         $("#list").append("<li> " + userinput + "</li>");
+        //     })
+
+        //     $("#btnprepend").click(function(){
+        //         var userinput = $("#userText").val();
+        //         $("#list").prepend("<li>  " + userinput + "</li>");    
+            
+        // })
+
+
+
         $(document).ready(function(){
             $("div").css({
                 "border" : "2px groove red",
                 "background-color" : "yellow",
                 "padding" : "20px",
                 "font-size" : "30px",
+                "text-align": "center",
             })
             
             $("#hidebtn").click(function(){
@@ -82,7 +114,28 @@
                     "background-color": ""})
                 })
 
+            $("div").contextmenu(function(){
+                $(this).css({
+                    "background-color": "yellow",
+                    "color": "blue"
+                })
+            })
 
+            $("body").keydown(function(){
+                $(this).css({
+                    "background-color": "aqua",
+                })
+            })
+            $("body").keypress(function(){
+                $(this).css({
+                    "background-color": "red",
+                })
+            })
+            $("body").keyup(function(){
+                $(this).css({
+                    "background-color": "yellow",
+                })
+            })
 
 
 
@@ -109,6 +162,7 @@
 
 
         })
+    })
 
     </script>
 
